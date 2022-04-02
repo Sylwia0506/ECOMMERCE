@@ -13,7 +13,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = model.ForeginKey(
+    category = models.ForeginKey(
         Category, related_name="product", on_delete=models.CASCADE
     )
     created_by = models.ForeginKey(
